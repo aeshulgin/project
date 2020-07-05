@@ -11,13 +11,39 @@ namespace project
             Console.SetWindowSize(40, 30);
             Console.SetBufferSize(40, 30);
 
-            Square s = new Square(2, 5, '*');
+            Figure s = new Stick(20, 5, '*');
+
+            s.Draw();
+            Thread.Sleep(5000);
+
+            s.Hide();
+            s.Rotate();
+            s.Draw();
+            Thread.Sleep(5000);
+
+            s.Hide();
+            s.Move(Direction.LEFT);
             s.Draw();
 
             Thread.Sleep(5000);
 
             s.Hide();
+            s.Move(Direction.DOWN);
+            s.Draw();
+            Thread.Sleep(5000);
+
+            s.Hide();
+            s.Move(Direction.DOWN);
+            s.Draw(); 
+            Thread.Sleep(5000);
+
+            s.Hide();
             s.Move(Direction.LEFT);
+            s.Draw();
+            Thread.Sleep(5000);
+
+            s.Hide();
+            s.Move(Direction.RIGHT);
             s.Draw();
 
             //Stick st = new Stick(6, 1, '*');

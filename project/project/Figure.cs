@@ -5,7 +5,7 @@ using System.Text;
 
 namespace project
 {
-    class Figure
+    abstract class Figure
     {
         protected Point[] points = new Point[4];
 
@@ -25,6 +25,8 @@ namespace project
             }
         }
 
+        public abstract void Rotate();
+        
         public void Hide()
         {
             foreach(Point p in points)
